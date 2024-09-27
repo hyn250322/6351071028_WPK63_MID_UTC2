@@ -123,6 +123,7 @@
     <Content Include="style.css" />
     <Content Include="UserControl\ucCategory.ascx" />
     <Content Include="UserControl\ucProductListByCategory.ascx" />
+    <Content Include="UserControl\ucSearchProduct.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -213,6 +214,13 @@
     </Compile>
     <Compile Include="UserControl\ucProductListByCategory.ascx.designer.cs">
       <DependentUpon>ucProductListByCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucSearchProduct.ascx.cs">
+      <DependentUpon>ucSearchProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucSearchProduct.ascx.designer.cs">
+      <DependentUpon>ucSearchProduct.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
