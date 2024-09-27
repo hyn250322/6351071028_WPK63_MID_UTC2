@@ -1,12 +1,18 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucProductListByCategory.ascx.cs" Inherits="de1.UserControl.WebUserControl2" %>
 <asp:ListView ID="ListView1" runat="server" DataKeyNames="ID" DataSourceID="ProductListByCategoryEntityDataSource">
     <ItemTemplate>
-      <div>
-          <asp:Label ID="Label1" runat="server" Text='<%# Eval("Name") %>'></asp:Label><br />
-          <asp:Image ID="Image1" runat="server" ImageURL='<%# "~/images/Beverages/" + Eval("ImageFilePath") %>'/><br />
-          <asp:Label ID="Label2" runat="server" Text='<%# Eval("Price") %>'></asp:Label><br />
-          <asp:HyperLink ID="HyperLink1" runat="server">View Details</asp:HyperLink><br />
-      </div>
+<div style="float: left; margin: 20px; text-align: center;">
+    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Name") %>'></asp:Label><br />
+    <asp:Image 
+        ID="Image1" 
+        runat="server" 
+        ImageURL='<%# "~/images/Beverages/" + Eval("ImageFilePath") %>' 
+        style="width: 170px; height: 80px;" /> <!-- Increased width -->
+    <br />
+    <asp:Label ID="Label2" runat="server" Text='<%# Eval("Price") %>'></asp:Label><br />
+    <asp:HyperLink ID="HyperLink1" runat="server">View Details</asp:HyperLink><br />
+</div>
+
     </ItemTemplate>
     <LayoutTemplate>
         <div id="itemPlaceholderContainer" runat="server" style="">
